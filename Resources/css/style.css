@@ -67,7 +67,7 @@ h1, h4 {
 
 
 /*navigation*/
-.nav {
+.nav, .mobile-nav {
   background-color: firebrick;
   color: white;
   text-transform: uppercase;
@@ -81,13 +81,13 @@ ul {
   list-style: none;
 }
 
-.mobile {
+.mobile-nav {
   display: none;
 }
 
 /*shop and address*/
 
-.products, .ifo {
+.products, .info {
   display: flex;
   justify-content: space-between;
   margin: 3em 0 0 0;
@@ -124,6 +124,9 @@ ul {
 /*location*/
 .info {
   width: 35%;
+  display: inline-block;
+  align-content: space-between;
+
 }
 
 .info .title {
@@ -140,4 +143,64 @@ footer {
   padding: 5em 0;
   background-color: black;
   margin-top: 4em;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .nav ul {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    text-align: center;
+  }
+  .product {
+    width: 47%;
+  }
+
+.product.glasses {
+  display: none;
+}
+}
+
+@media only screen and (max-width: 470px) {
+.banner {
+  height: 15em;
+}
+.header {
+  width: 100%;
+  padding: 1em 2em;
+  top: 10em;
+}
+.header h4 {
+  font-size: .77rem;
+}
+
+.header h1 {
+  font-size: 1rem;
+}
+
+.products,
+.info {
+  flex-wrap: wrap;
+}
+.product {
+  width: 90%;
+  margin: auto;
+}
+
+.product.watch {
+  display: none;
+}
+
+.info {
+  width: 90%;
+  margin: 0.5em auto;
+
+}
+footer {
+  text-align: center;
+}
 }
